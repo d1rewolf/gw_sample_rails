@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Todos</h1>
+
+<div id="todos" class="bg-green-50">
+  <% @todos.each do |todo| %>
+    <div class="bg-blue-100" id="todo_<%= todo.id %>">
+    <%= render todo %>
+    <p>
+      <%= link_to "Show this todo", todo %>
+    </p>
+    </div>
+    <turbo-frame "my_turbo_frame_<%= todo.id %>">
+    <div class="bg-red-100" id="hey_div_<%= todo.id %>">Hey</div>
+    </turbo-frame>
+  <% end %>
+</div>
+<%= link_to "New todo", new_todo_path %>

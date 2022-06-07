@@ -1,0 +1,21 @@
+<div id="<%= dom_id todo %>">
+  <p>
+    <strong>Title:</strong>
+    <%= todo.title %>
+  </p>
+
+  <p>
+    <strong>Detail:</strong>
+    <%= todo.detail %>
+  </p>
+
+  <p>
+    <strong>Due date:</strong>
+    <%= todo.due_date %>
+  </p>
+
+  <%= link_to :stream, :id=>todo.id do %>
+  Yo You
+  <% end %>
+
+</div>
