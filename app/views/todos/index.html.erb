@@ -10,8 +10,11 @@
       <%= link_to "Show this todo", todo %>
     </p>
     </div>
-    <turbo-frame "my_turbo_frame_<%= todo.id %>">
+    <turbo-frame id="my_turbo_frame_<%= todo.id %>">
     <div class="bg-red-100" id="hey_div_<%= todo.id %>">Hey</div>
+    <%= link_to stream_todo_path(todo) do %>
+    Click to stream
+    <% end %>
     </turbo-frame>
   <% end %>
 </div>

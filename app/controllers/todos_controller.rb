@@ -20,6 +20,7 @@ class TodosController < ApplicationController
   end
 
   def stream
+    @todo = Todo.find(params[:id])
     respond_to do |format|
       #debugger
       format.html
